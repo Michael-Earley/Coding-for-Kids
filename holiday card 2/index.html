@@ -1,0 +1,66 @@
+<html>
+
+	<head>
+		<title>Snow Days</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+				
+		<script src="scripts/jquery-2.1.1.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script src="scripts/snowfall.jquery.min.js"></script>
+        
+        <script type='text/javascript'>
+            
+        $(document).ready(function () {
+            
+          $(".btn").click(function () {
+          
+                var snowtype = event.target.id;
+                var flakecount;
+                var maxspeed;
+                
+                if(snowtype == "light")
+                {
+                	flakecount = 25;
+                	maxspeed = 5;
+                }
+                else if(snowtype == "medium")
+                {
+                	flakecount = 75;
+                	maxspeed = 10;
+                }
+                else
+                {
+                	flakecount = 150;
+                	maxspeed = 20;
+                }
+                	  	
+                $(document).snowfall('clear');
+                $(document).snowfall({ image: "images/twix.png", minSize: 10, maxSize: 80, flakeCount : flakecount, minSpeed: 1, maxSpeed : maxspeed, collection : "#base"  });
+        	
+        	});
+
+        });
+            				
+        </script>
+	</head>
+
+	<body>
+	
+		<h1 class="pull-left">Let it Snow - whatever!</h1>
+		
+		<div class="btn-group pull-right">
+			<button class="btn btn-default" id="light">Light Snow</button>
+			<button class="btn btn-default" id="medium">Medium Snow</button>
+			<button class="btn btn-default" id="heavy">Heavy Snow</button>
+		</div>
+		
+		
+		<img id="snowman" src="images/snowman.png" />
+		<img id="snow" src="images/snow.png" />
+		<div id="base"></div>
+		
+		
+	</body>
+
+</html>
