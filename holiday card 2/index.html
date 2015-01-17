@@ -1,42 +1,59 @@
 <html>
 
 	<head>
+		<!-- The page title which appears in the browser tab. This will not appear on yor web page -->
 		<title>Snow Days</title>
+		
+		<!-- Bootstrap style sheet is load from a server on the internet. Alternatively we could have downloaded it and placed it in the css folder -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<!-- Our own style sheet which controls the look and feel of our page -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-				
+		
+		<!-- jQuery script file. This is used for the $(document).ready function and the $(".btn").click function -->		
 		<script src="scripts/jquery-2.1.1.min.js"></script>
+		<!-- Bootstrap scripts file is load from a server on the internet. Alternatively we could have downloaded it and placed it in the scripts folder -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+		<!-- A library of functions based on juery which provides the snowfall effect -->
         <script src="scripts/snowfall.jquery.min.js"></script>
         
         <script type='text/javascript'>
             
+        // stuff that happens when all the elements on the page are loaded in the browser
         $(document).ready(function () {
-            
-          $(".btn").click(function () {
           
+          // jQuery event which happens when any element with as class name of btn is clicked e.g. class='.btn'  
+          $(".btn").click(function () {
+          		
+          		// event.target.id allows us to access the id for the element that is clicked e.g. id='light'
                 var snowtype = event.target.id;
                 var flakecount;
                 var maxspeed;
                 
+                // Use an if else conditional statement to set different flake count and speeds depending on the type of snow selected
+                // if the snowtype selected is light
                 if(snowtype == "light")
                 {
                 	flakecount = 25;
                 	maxspeed = 5;
                 }
+                // else if the snowtype selected is medium
                 else if(snowtype == "medium")
                 {
                 	flakecount = 75;
                 	maxspeed = 10;
                 }
+                // the only other option is heavy snow
                 else
                 {
                 	flakecount = 150;
                 	maxspeed = 20;
                 }
-                	  	
+                
+                // clear the previous snow settings  	
                 $(document).snowfall('clear');
-                $(document).snowfall({ image: "images/twix.png", minSize: 10, maxSize: 80, flakeCount : flakecount, minSpeed: 1, maxSpeed : maxspeed, collection : "#base"  });
+                
+                // apply the new settings for flakecount and maxspeed
+                $(document).snowfall({ image: "images/flake.png", minSize: 10, maxSize: 80, flakeCount : flakecount, minSpeed: 1, maxSpeed : maxspeed, collection : "#base"  });
         	
         	});
 
@@ -47,18 +64,22 @@
 
 	<body>
 	
+		<!-- Bootstrap pull-left will align the title to the left of the screen -->
 		<h1 class="pull-left">Let it Snow - whatever!</h1>
 		
+		<!-- Bootstrap pull-right will align the buttons to the right of the screen 
+		Bootstrap styling is used here for the button group and buttons -->
 		<div class="btn-group pull-right">
 			<button class="btn btn-default" id="light">Light Snow</button>
 			<button class="btn btn-default" id="medium">Medium Snow</button>
 			<button class="btn btn-default" id="heavy">Heavy Snow</button>
 		</div>
 		
-		
+		<!-- The snowman -->
 		<img id="snowman" src="images/snowman.png" />
+		
+		<!-- The background image -->
 		<img id="snow" src="images/snow.png" />
-		<div id="base"></div>
 		
 		
 	</body>
