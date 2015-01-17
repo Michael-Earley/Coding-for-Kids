@@ -1,3 +1,3 @@
 # Glasnevin-NS
-Glasnevin NS Coders
+Glasnevin NS Coders.
 Teaching kids and grown ups how to code
