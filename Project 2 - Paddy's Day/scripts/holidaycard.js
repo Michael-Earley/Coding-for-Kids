@@ -10,7 +10,7 @@ $(document).ready(function () {
     var maxspeed;
     var imagetype;
     
-    imagetype = imageLocation + "flake.png";	//default
+    imagetype = imageLocation + $("#flaketype option:selected").val();
           
 	// jQuery event which happens when any element with as class name of btn is clicked e.g. class='.btn'  
     $(".btn").click(function () {
