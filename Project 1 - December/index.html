@@ -1,0 +1,44 @@
+<html>
+
+	<head>
+		<!-- The page title which appears in the browser tab. This will not appear on yor web page -->
+		<title>Snow Days</title>
+		
+		<!-- Bootstrap style sheet is load from a server on the internet. Alternatively we could have downloaded it and placed it in the css folder -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<!-- Our own style sheet which controls the look and feel of our page -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+		<!-- jQuery script file. This is used for the $(document).ready function and the $(".btn").click function -->		
+		<script src="scripts/jquery-2.1.1.min.js"></script>
+		<!-- Bootstrap scripts file is load from a server on the internet. Alternatively we could have downloaded it and placed it in the scripts folder -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+		<!-- A library of functions based on juery which provides the snowfall effect -->
+        <script src="scripts/snowfall.jquery.min.js"></script>
+        <!-- The scripts for this page. In class, we placed them inside a script tag in the header. Now they are in their own .js file which is neater. -->
+        <script src="scripts/holidaycard.js"></script>
+        
+	</head>
+
+	<body>
+		
+		<!-- Bootstrap pull-right will align the buttons to the right of the screen 
+		Bootstrap styling is used here for the button group and buttons -->
+		<div class="form-group">
+			<div class="btn-group pull-right">
+				<button class="btn btn-default" id="light">Light Snow</button>
+				<button class="btn btn-default" id="medium">Medium Snow</button>
+				<button class="btn btn-default" id="heavy">Heavy Snow</button>
+			</div>
+		</div>
+		
+		<!-- The snowman. A png format image should be used. -->
+		<img id="snowman" src="images/snowman.png" />
+		
+		<!-- The background image. A png format image is used which has transparency to allow the sky to show through -->
+		<img id="scene" src="images/snow.png" />
+		
+		
+	</body>
+
+</html>
