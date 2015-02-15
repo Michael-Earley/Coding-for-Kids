@@ -22,22 +22,40 @@
 
 	<body>
 	
-		<!-- Bootstrap pull-left will align the title to the left of the screen -->
-		<h1 class="pull-left">Let it Snow - whatever!</h1>
+		<!-- Pull-down list of images -->
+		<div class="form-group">
+    		<label class="col-sm-1 control-label">Flake Type</label>
+    		<div class="col-sm-3">
+      			<select id="flaketype" class="form-control">
+					<option value="alien.png">Aliens</option>
+					<option value="cat.png">Cats</option>
+					<option value="heart.png">Hearts</option>
+					<option value="shamrock.png">Shamrocks</option>
+					<option value="coin.png">Gold Coins</option>
+					<option value="flag.png">Flags</option>
+					<option value="pikachu.png">Pikachus</option>
+					<option value="flake.png">Snow Flakes</option>
+					<option value="twix.png">Twix bars</option>
+					<option value="unicorn.png">Unicorns</option>
+				</select>
+    		</div>
+  		</div>
 		
 		<!-- Bootstrap pull-right will align the buttons to the right of the screen 
 		Bootstrap styling is used here for the button group and buttons -->
-		<div class="btn-group pull-right">
-			<button class="btn btn-default" id="light">Light Snow</button>
-			<button class="btn btn-default" id="medium">Medium Snow</button>
-			<button class="btn btn-default" id="heavy">Heavy Snow</button>
+		<div class="form-group">
+			<div class="btn-group pull-right">
+				<button class="btn btn-default" id="light">Light Snow</button>
+				<button class="btn btn-default" id="medium">Medium Snow</button>
+				<button class="btn btn-default" id="heavy">Heavy Snow</button>
+			</div>
 		</div>
 		
 		<!-- The snowman. A png format image should be used. -->
-		<img id="snowman" src="images/snowman.png" />
+		<img id="snowman" src="images/leprechaun.png" />
 		
 		<!-- The background image. A png format image is used which has transparency to allow the sky to show through -->
-		<img id="scene" src="images/snow.png" />
+		<img id="scene" src="images/hills.png" />
 		
 		
 	</body>

@@ -1,5 +1,16 @@
 // stuff that happens when all the elements on the page are loaded in the browser
 $(document).ready(function () {
+
+	// folder where images are located
+	var imageLocation = "images/";
+	
+	var minsize = 10;
+	var maxsize = 80;
+	var flakecount;
+    var maxspeed;
+    var imagetype;
+    
+    imagetype = imageLocation + "flake.png";	//default
           
 	// jQuery event which happens when any element with as class name of btn is clicked e.g. class='.btn'  
     $(".btn").click(function () {
@@ -34,8 +45,15 @@ $(document).ready(function () {
                 
         // apply the new settings for flakecount and maxspeed
         // The image used is flake.png which is in the images folder. Try changing flake.png to twix.png or pikachu.png. The images pn format files and are approx 100px x 80px.
-        $(document).snowfall({ image: "images/flake.png", minSize: 10, maxSize: 80, flakeCount : flakecount, minSpeed: 1, maxSpeed : maxspeed  });
+        $(document).snowfall({ image: imagetype, minSize: minsize, maxSize: maxsize, flakeCount : flakecount, minSpeed: 1, maxSpeed : maxspeed  });
         	
+    });
+    
+    // change image for snow flakes
+    $("#flaketype").change(function () {
+        imagetype = imageLocation + $("#flaketype option:selected").val();
+        $(document).snowfall('clear');
+        $(document).snowfall({ image: imagetype, minSize: minsize, maxSize: maxsize, flakeCount : flakecount, minSpeed: 1, maxSpeed : maxspeed  });
     });
 
 });
