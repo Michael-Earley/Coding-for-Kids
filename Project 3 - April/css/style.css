@@ -15,7 +15,7 @@ body {
 /* The snowman. To allow us to position the snowman at specific distance from the top and left of the screen, position must be set to absolute. */
 /* The z-index is similar to overlaying transparencies with pictures. An element with a z-index of 1000 will overlay an element with a z-index of 999 or 0. */
 /* If the z-index is not specified, it is 0 */
-#leprechaun {
+#character {
 	position: absolute;
 	left: 400px;
 	top: 350px;
@@ -30,8 +30,8 @@ body {
 h1 {
     color: red;
     font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
-    font-size: 48px;
-    padding: 20px;
+    font-size: 26px;
+    padding: 0px;
     text-shadow: 5px 5px rgba(0,0,0,0.3);
 }
 
