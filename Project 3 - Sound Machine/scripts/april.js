@@ -4,24 +4,25 @@ $(document).ready(function () {
 	// audio player and source
 	var audioPlayer = $("#audioPlayer");
 	var audioSource = $("#audioSource");
+	var audioSelection = $("#audioSelection");
 	
 	// folder where images are located
 	var folder = "sounds/";
-	var audioSelection = "";
+	var sound = "";
 	
 	// load the current selection
-	audioSelection = folder + $("#audioSelection option:selected").val();
-	audioSource.attr('src', audioSelection);
+	sound = folder + $("#audioSelection option:selected").val();
+	audioSource.attr('src', sound);
     audioPlayer.load();
     
 	
 	// change the sound selection
-    $("#audioSelection").change(function () {
+    audioSelection.change(function () {
     
-        audioSelection = folder + $("#audioSelection option:selected").val();
-        audioSource.attr('src', audioSelection);
+        sound = folder + $("#audioSelection option:selected").val();
+        audioSource.attr('src', sound);
         audioPlayer.load(); 
-        
+
     });
 
 });
