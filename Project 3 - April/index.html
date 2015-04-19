@@ -28,10 +28,23 @@
     		<div class="col-sm-3">
     		
     		<!-- List of Sounds -->
-    		
+      			<select id="audioSelection" class="form-control">
+					<option value="airplane.mp3">Airplane</option>
+					<option value="car.mp3">Car</option>
+					<option value="chime.mp3">Chime</option>
+					<option value="door.mp3" selected>Door</option>
+					<option value="fart.mp3">Fart</option>
+					<option value="modem.mp3">Modem</option>
+					<option value="musicbox.mp3">Music Box</option>
+					<option value="toy.mp3">Toy</option>
+					<option value="train.mp3">Train</option>
+					<option value="wind.mp3">Wind</option>
+				</select>
     		
     		<!-- Audio Player -->
-    				
+    		<audio controls id="audioPlayer" >
+    			<source id="audioSource" src="" type="audio/mpeg">
+    		</audio>		
 				
     		</div>
   		</div>
